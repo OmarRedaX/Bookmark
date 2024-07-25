@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+    <link rel="icon" href="images/bookmark icon.png">
+
+    <!--------------------------   Fonts   -------------------------->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+    <!--------------------------   Bootstrap   -------------------------->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!--------------------------   Main Css   -------------------------->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--------------------------   fontawsome   -------------------------->
+    <link rel="stylesheet" href="css/all.min.css">
+
+</head>
+
+
+<body>
+
+    <div class="main vh-100">
+
+        <div class="container pt-5">
+
+            <div class="head d-flex justify-content-center">
+                <h1 class=" font-size  pacifico position-relative z-1">Bookmarker</h1>
+            </div>
+
+            <h3 class="text-center my-5 py-4 border-top border-black "><i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites <i class="fa-solid fa-bookmark"></i></h3>
+
+            <div class="site-name">
+                <label for="bookmark-name" class="pb-2 fw-semibold">
+                    <i class="fa-solid fa-book-bookmark pe-2"></i>
+                    Site Name
+                </label>
+
+                <input oninput="validateInput(this)" type="text" placeholder="Bookmark Name" class="form-control ui-autocomplete-input " id="bookmarkName" autocomplete="on">
+            </div>
+
+            <div class="site-URL mt-4">
+                <label for="bookmark-URL" class="pb-2 fw-semibold">
+                    <i class="fa-solid fa-link pe-2"></i>
+                    Site URL
+                </label>
+
+                <input oninput="validateInput(this)" type="text" placeholder="website URL" class="form-control ui-autocomplete-input " id="bookmarkUrl" autocomplete="on">
+            </div>
+
+            <div class="d-flex justify-content-center border-bottom border-black">
+                <button onclick="add()" class="my-4 btn btn-danger px-5" id="submitBtn">Submit</button>
+            </div>
+
+            <table class="table mt-4 text-center bg-light">
+
+                <thead>
+
+                  <tr>
+                    <th class="text-capitalize">index</th>
+                    <th class="text-capitalize">Website Name</th>
+                    <th class="text-capitalize">Visit</th>
+                    <th class="text-capitalize">Delete</th>
+                 </tr>
+
+                </thead>
+
+                <tbody id="tableContent">
+
+                    
+                    
+
+
+
+                </tbody>
+
+              </table>
+              
+              <div id="errr"></div>
+    
+        </div>
+
+    </div>
+    
+    
+
+     <!--------------------------   Bootstrap js   -------------------------->
+     <script src="js/bootstrap.bundle.min.js"></script>
+ 
+     <!--------------------------   main js   -------------------------->
+     <script src="js/index.js"></script>
+
+</body>
+
+
+</html>
